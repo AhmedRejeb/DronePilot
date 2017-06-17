@@ -12,6 +12,9 @@ __email__ = "alduxvm@gmail.com"
 __status__ = "Development"
 __video__ = "http://www.youtube.com/watch?v=TkYeQ6orN8Y"
 
+import sys
+sys.path.append("/home/pi/DronePilot/DronePilot/modules/")
+
 import time, threading
 from dronekit import connect, VehicleMode
 import modules.UDPserver as udp
