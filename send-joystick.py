@@ -13,7 +13,7 @@ __status__ = "Development"
 
 
 import socket, struct, time
-import pygame
+#import pygame
 from modules.utils import *
 
 # Main configuration
