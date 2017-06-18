@@ -17,6 +17,22 @@ from twisted.internet.protocol import DatagramProtocol
 from twisted.internet import reactor
 from twisted.internet import task
 
+
+#Raspberry pie IP address
+#UDP_IP = "172.30.144.154"
+#Mac IP address
+UDP_IP = "192.168.137.107"
+#UDP_IP = "localhost"
+#UDP_PORT = 51001
+#message = ""
+#udp_mess = ""
+#timestamp = 0
+
+sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # UDP
+sock.bind((UDP_IP, UDP_PORT))
+
+print "System ready on "+str(UDP_IP)
+
 UDPport = 51001
 message = [1500,1500,1500,1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 active = False
