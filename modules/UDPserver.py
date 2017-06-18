@@ -23,13 +23,13 @@ from twisted.internet import task
 #Mac IP address
 UDP_IP = "192.168.137.107"
 #UDP_IP = "localhost"
-UDP_PORT = 51001
+UDPPORT = 51001
 #message = ""
 #udp_mess = ""
 #timestamp = 0
 
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # UDP
-sock.bind((UDP_IP, UDP_PORT))
+sock.bind((UDP_IP, UDPPORT))
 
 print "System ready on "+str(UDP_IP)
 
