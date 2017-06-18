@@ -18,7 +18,7 @@ from modules.utils import *
 
 # Main configuration
 #UDP_IP = "127.0.0.1" # Localhost (for testing)
-UDP_IP = "130.209.176.146" # Vehicle IP address
+UDP_IP = "192.168.137.107" # Vehicle IP address
 UDP_PORT = 51001 # This port match the ones using on other scripts
 
 update_rate = 0.01 # 100 hz loop cycle
