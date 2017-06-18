@@ -23,7 +23,7 @@ from twisted.internet import task
 #Mac IP address
 UDP_IP = "192.168.137.107"
 #UDP_IP = "localhost"
-#UDP_PORT = 51001
+UDP_PORT = 51001
 #message = ""
 #udp_mess = ""
 #timestamp = 0
