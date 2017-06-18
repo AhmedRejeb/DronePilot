@@ -23,7 +23,7 @@ from modules.pixVehicle import *
 # SITL via UDP 
 #vehicle = connect('udp:127.0.0.1:14549', wait_ready=True)
 # Real vehicle via Serial Port 
-vehicle = connect('/dev/ttyS0', wait_ready=False)
+#vehicle = connect('/dev/ttyS0', wait_ready=False)
 vehicle = connect('/dev/ttyAMA0', wait_ready=False)
 
 while True:
