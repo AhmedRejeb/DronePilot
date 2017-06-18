@@ -24,8 +24,8 @@ from modules.pixVehicle import *
 #vehicle = connect('udp:127.0.0.1:14549', wait_ready=True)
 # Real vehicle via Serial Port 
 #vehicle = connect('/dev/ttyS0', wait_ready=False)
-vehicle = connect('/dev/ttyAMA0', wait_ready=False)
-
+#vehicle = connect('/dev/ttyAMA0', wait_ready=False)
+vehicle = connect('/dev/serial0', wait_ready=False)
 while True:
 	print "%s" % vehicle.attitude #SR2_EXTRA1
 	print "%s" % vehicle.velocity #SR2_POSITION
