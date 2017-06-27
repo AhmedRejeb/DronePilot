@@ -13,7 +13,7 @@ __status__ = "Development"
 
 import time
 from dronekit import connect, VehicleMode, LocationGlobalRelative
-import modules.UDPserver as udp
+#import modules.UDPserver as udp
 from modules.utils import *
 from modules.pixVehicle import *
 
