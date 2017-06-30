@@ -33,6 +33,7 @@ update_rate = 0.01 # 100 hertz update rate
 update_rate = 0.5 
 
 rcCMD = [1500,1500,1500,1000,1000,1000,1000,1000]
+vehicle.channels.overrides = {}  ###+++++++ Ahmed
 
 def sendCommands():
     """
@@ -47,6 +48,8 @@ def sendCommands():
                 # Channel order in mavlink:   roll, pitch, throttle, yaw
                 # Channel order in optitrack: roll, pitch, yaw, throttle
                 #Remember to check min/max for rc channels on APM Planner
+                print udp.message ########### ++++++++++++Ahmed
+                print "\\\\\\\\\\\\\\\\\\\\\\\\///////////////////////"
                 roll     = mapping(udp.message[0],1000,2000,1000,2000)
                 pitch    = mapping(udp.message[1],1000,2000,2000,1000) # To invert channel
                 throttle = mapping(udp.message[3],1000,2000,968,1998) # Map it to match RC configuration
@@ -57,7 +60,9 @@ def sendCommands():
                 yaw      = udp.message[2]   #######Att inverver
                 vehicle.channels.overrides = { "1" : roll, "2" : pitch, "3" : throttle, "4" : yaw }
                 print "%s" % vehicle.attitude
-                print "%s" % vehicle.channels
+                print "Channel overrides 1: %s" % vehicle.channels
+                # Get all channel overrides
+                print " Channel overrides  2: %s" % vehicle.channels.overrides
                 # hz loop
                 while elapsed < update_rate:
                     elapsed = time.time() - current
