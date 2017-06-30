@@ -32,6 +32,8 @@ vehicle = connect('/dev/serial0', baud=57600, wait_ready=False)  ##MOD 56700
 update_rate = 0.01 # 100 hertz update rate
 update_rate = 0.5 
 
+vehicle.parameters['ARMING_CHECK']=-9
+
 rcCMD = [1500,1500,1500,1000,1000,1000,1000,1000]
 vehicle.channels.overrides = {}  ###+++++++ Ahmed
 
