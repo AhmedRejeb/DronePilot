@@ -54,10 +54,7 @@ def sendCommands():
                 pitch    = mapping(udp.message[1],1000,2000,1900,1100) # To invert channel
                 throttle = mapping(udp.message[3],1000,2000,986,1998) # Map it to match RC configuration
                 yaw      = mapping(udp.message[2],1000,2000,986,1900) # Map it to match RC configuration
-                roll     = udp.message[0]
-                pitch    = udp.message[1]
-                throttle = udp.message[3]   #######Att inverser
-                yaw      = udp.message[2]   #######Att inverver
+
                 vehicle.channels.overrides = { "1" : roll, "2" : pitch, "3" : throttle, "4" : yaw }
                 print "%s" % vehicle.attitude
                 print "Channel overrides 1: %s" % vehicle.channels
