@@ -27,7 +27,7 @@ from modules.pixVehicle import *
 # SITL/vehicle via UDP (connection coming from mavproxy.py)
 #vehicle = connect('udp:127.0.0.1:14549', wait_ready=True)
 ## Direct UART communication to Pixhawk
-vehicle = connect('/dev/serial0', baud=56700, wait_ready=False)
+vehicle = connect('/dev/serial0', baud=57600, wait_ready=False)  ##MOD 56700
 
 update_rate = 0.01 # 100 hertz update rate
 update_rate = 0.5 
