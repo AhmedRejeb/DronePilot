@@ -46,11 +46,11 @@ def sendCommands():
                 # Part for applying commands to the vehicle.
                 # Channel order in mavlink:   roll, pitch, throttle, yaw
                 # Channel order in optitrack: roll, pitch, yaw, throttle
-                # Remember to check min/max for rc channels on APM Planner
-                #roll     = mapping(udp.message[0],1000,2000,1000,2000)
-                #pitch    = mapping(udp.message[1],1000,2000,2000,1000) # To invert channel
-                #throttle = mapping(udp.message[3],1000,2000,968,1998) # Map it to match RC configuration
-                #yaw      = mapping(udp.message[2],1000,2000,968,2062) # Map it to match RC configuration
+                #Remember to check min/max for rc channels on APM Planner
+                roll     = mapping(udp.message[0],1000,2000,1000,2000)
+                pitch    = mapping(udp.message[1],1000,2000,2000,1000) # To invert channel
+                throttle = mapping(udp.message[3],1000,2000,968,1998) # Map it to match RC configuration
+                yaw      = mapping(udp.message[2],1000,2000,968,2000) # Map it to match RC configuration
                 roll     = udp.message[0]
                 pitch    = udp.message[1]
                 throttle = udp.message[3]   #######Att inverser
