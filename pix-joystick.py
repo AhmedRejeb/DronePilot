@@ -56,7 +56,7 @@ def sendCommands():
                 throttle = udp.message[3]   #######Att inverser
                 yaw      = udp.message[2]   #######Att inverver
                 vehicle.channels.overrides = { "1" : roll, "2" : pitch, "3" : throttle, "4" : yaw }
-                #print "%s" % vehicle.attitude
+                print "%s" % vehicle.attitude
                 print "%s" % vehicle.channels
                 # hz loop
                 while elapsed < update_rate:
