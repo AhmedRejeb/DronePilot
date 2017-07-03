@@ -34,7 +34,8 @@ def arm_and_takeoff(vehicle, aTargetAltitude):
     # Copter should arm in GUIDED mode
     vehicle.mode    = vehicle.Mode("GUIDED")
     vehicle.armed   = True
-    vehicle.flush()
+    #vehicle.flush()
+    vehicle.commands.upload()
 
     while not vehicle.armed and not api.exit:
         print " Waiting for arming..."
