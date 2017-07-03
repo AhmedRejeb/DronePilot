@@ -41,9 +41,9 @@ def arm_and_takeoff(vehicle, aTargetAltitude):
     #vehicle.flush()
     
 
-    while not vehicle.armed and not api.exit:
-        print " Waiting for arming..."
-        time.sleep(1)
+   # while not vehicle.armed and not api.exit:
+   #    print " Waiting for arming..."
+   #    time.sleep(1)
 
     print "Taking off!"
     vehicle.commands.takeoff(aTargetAltitude) # Take off to target altitude
