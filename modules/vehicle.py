@@ -32,7 +32,7 @@ def arm_and_takeoff(vehicle, aTargetAltitude):
 		
     print "Arming motors"
     # Copter should arm in GUIDED mode
-    vehicle.mode    = vehicle.Mode("GUIDED")
+    vehicle.mode    = vehicle.Mode("STABILIZE")
     vehicle.armed   = True
     while not vehicle.armed
 	print" 1er boucle...."
