@@ -58,6 +58,8 @@ def sendCommands():
                 yaw      = mapping(udp.message[2],1000,2000,986,1900) # Map it to match RC configuration
 
                 vehicle.channels.overrides = { "1" : roll, "2" : pitch, "3" : throttle, "4" : yaw }
+                vehicle.flush()
+                time.sleep(0.5)
                 print "%s" % vehicle.attitude
                 print "Channel overrides 1: %s" % vehicle.channels
                 # Get all channel overrides
