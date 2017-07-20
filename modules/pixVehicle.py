@@ -35,24 +35,28 @@ def arm_and_takeoff(vehicle, aTargetAltitude):
     print "Arming motors"
     vehicle.mode    = VehicleMode("GUIDED")
     vehicle.armed   = True
-
+    
+    j=1
 #    while not vehicle.armed:
-#        print "Waiting for arming..."
-#        time.sleep(1)
+    while j<6:
+        print "Waiting for arming..."
+        vehicle.armed   = True
+        time.sleep(1)
+        j=j+1
 
     print "Taking off!"
     vehicle.simple_takeoff(aTargetAltitude) # Take off to target altitude
-
-    try:
-        while vehicle.mode.name=="GUIDED":
-            print " -> Alt:", vehicle.location.global_relative_frame.alt
-            if abs(vehicle.location.global_relative_frame.alt-aTargetAltitude) < 0.05: 
-                print "\n\tReached %0.1f m\n" % (aTargetAltitude)
-                break
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print "Keyboard Interrupt on arm_and_takeoff."
-        pass # do cleanup here
+#
+#    try:
+#        while vehicle.mode.name=="GUIDED":
+#            print " -> Alt:", vehicle.location.global_relative_frame.alt
+#            if abs(vehicle.location.global_relative_frame.alt-aTargetAltitude) < 0.05: 
+#                print "\n\tReached %0.1f m\n" % (aTargetAltitude)
+#                break
+#            time.sleep(1)
+#    except KeyboardInterrupt:
+#        print "Keyboard Interrupt on arm_and_takeoff."
+#        pass # do cleanup here
 
 
 def go_to_alt(vehicle, target):
