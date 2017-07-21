@@ -59,11 +59,9 @@ def sendCommands():
 
                 vehicle.channels.overrides = { "1" : roll, "2" : pitch, "3" : throttle, "4" : yaw }
                 vehicle.flush()
-                time.sleep(0.5)
+                time.sleep(0.1)
                 print "%s" % vehicle.attitude
                 print "Channel overrides 1: %s" % vehicle.channels
-                # Get all channel overrides
-                print " Channel overrides  2: %s" % vehicle.channels.overrides
                 # hz loop
                 while elapsed < update_rate:
                     elapsed = time.time() - current
