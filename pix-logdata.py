@@ -24,6 +24,8 @@ from modules.pixVehicle import *
 vehicle = connect('udp:127.0.0.1:14549', wait_ready=True)
 # Direct UART communication to Pixhawk
 #vehicle = connect('/dev/ttyAMA0', wait_ready=True)
+vehicle = connect('/dev/serial0',baud=56700, wait_ready=False)
+
 
 update_rate = 0.02 # 50 hertz update rate (maximum for DroneKit)
 
