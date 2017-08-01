@@ -31,7 +31,7 @@ vehicle = connect('/dev/serial0',baud=56700, wait_ready=False)
 """ Mission starts here """
 
 print "\n\nAttempting to start take off!!\n\n"
-arm_and_takeoff(vehicle, 10)
+arm_and_takeoff(vehicle, 2)
 vehicle.commands.upload() #### add by ahmed
 print "Wait 5 seconds before going landing"
 print "Current altitude: ", vehicle.location.global_relative_frame.alt
