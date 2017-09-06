@@ -2,14 +2,9 @@
 
 """send-joystick.py: Reads a joystick device using pygame and sends the information via UDP."""
 
-__author__ = "Aldo Vargas"
-__copyright__ = "Copyright 2016 Altax.net"
-
 __license__ = "GPL"
 __version__ = "1"
-__maintainer__ = "Aldo Vargas"
-__email__ = "alduxvm@gmail.com"
-__status__ = "Development"
+
 
 
 import socket, struct, time
@@ -53,6 +48,7 @@ while True:
     
     print message
 
+    
     # Make this loop work at update_rate
     while elapsed < update_rate:
         elapsed = time.time() - current
