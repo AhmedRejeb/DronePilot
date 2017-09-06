@@ -2,14 +2,9 @@
 """ Drone Pilot - Control of MRUAV """
 """ simulation-slung-load.py: Script that simulates neural network output."""
 
-__author__ = "Aldo Vargas"
-__copyright__ = "Copyright 2016 Altax.net"
-
 __license__ = "GPL"
-__version__ = "1.0"
-__maintainer__ = "Aldo Vargas"
-__email__ = "alduxvm@gmail.com"
-__status__ = "Development"
+__version__ = "1.1"
+
 
 import time, datetime, csv, threading
 from modules.utils import *
